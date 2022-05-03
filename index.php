@@ -6,6 +6,7 @@ $persons = new Persons();
 $devices = new Devices();
 $systems = new Systems();
 
+// add new person or edit existing person
 if(isset($_POST['submitPersonNew']) || isset($_POST['submitPersonEdit']))
 {
   $_INPUT = $s->san($_POST);
@@ -24,6 +25,7 @@ if(isset($_POST['submitPersonNew']) || isset($_POST['submitPersonEdit']))
     $persons->addPerson($data);
   }
 }
+// add new device or edit existing device
 elseif(isset($_POST['submitDeviceNew']) || isset($_POST['submitDeviceEdit']))
 {
   $_INPUT = $s->san($_POST);
@@ -39,6 +41,7 @@ elseif(isset($_POST['submitDeviceNew']) || isset($_POST['submitDeviceEdit']))
     $devices->addDevice($data);
   }
 }
+// add new system or edit existing system
 elseif(isset($_POST['submitSystemNew']) || isset($_POST['submitSystemEdit']))
 {
   $_INPUT = $s->san($_POST);
