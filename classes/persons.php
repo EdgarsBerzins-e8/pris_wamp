@@ -4,7 +4,7 @@ class Persons extends Database
 {
   protected $var, $data = [];
 
-  // get all field of all persons from persons table ordered by first name
+  // get all fields of all persons from persons table ordered by first name
   public function getAllPersons()
   {
     return $this->get('persons', null, 'name');
